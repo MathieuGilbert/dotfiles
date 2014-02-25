@@ -17,11 +17,11 @@ def unbundled_require(gem)
       warn "Couldn't find #{gem}"
       return
     end
- 
+
     spec = Gem::Specification.load spec_path
     spec.activate
   end
- 
+
   begin
     require gem
     yield if block_given?
@@ -78,7 +78,7 @@ def extend_console(name, care=true, required=true)
   else
     $console_extensions << "#{ANSI[:LGRAY]}#{name}#{ANSI[:RESET]}"
   end
-  
+
 rescue LoadError
   $console_extensions << "#{ANSI[:RED]}#{name}#{ANSI[:RESET]}"
 end
@@ -127,7 +127,7 @@ extend_console 'pm', true, false do
     end
     max_name = data.collect {|item| item[0].size}.max
     max_args = data.collect {|item| item[1].size}.max
-    data.each do |item| 
+    data.each do |item|
       print " #{ANSI[:YELLOW]}#{item[0].to_s.rjust(max_name)}#{ANSI[:RESET]}"
       print "#{ANSI[:GREEN]}#{item[1].ljust(max_args)}#{ANSI[:RESET]}"
       print "   #{ANSI[:LGRAY]}#{item[2]}#{ANSI[:RESET]}\n"

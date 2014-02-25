@@ -1,6 +1,6 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
- 
+
 if [[ -s "${HOME}/.bash/bashrc" ]] ; then
   bashrc_local_install=1
   bashrc_prefix="${HOME}/.bash"
@@ -9,4 +9,5 @@ if [[ -s "${HOME}/.bash/bashrc" ]] ; then
 fi
 
 export EDITOR='vim'
-export SSL_CERT_FILE="/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt"
+export SSL_CERT_FILE="/Users/mathieu/cacert.pem"
+export NODE_PATH="/usr/local/lib/node_modules"
