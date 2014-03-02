@@ -12,7 +12,7 @@ require "yaml"
 def unbundled_require(gem)
   if defined?(::Bundler)
     ruby_version_patch = ENV['RBENV_VERSION']
-    ruby_version_no_patch = ENV['RBENV_VERSION'].split('-').first
+    ruby_version_no_patch = ENV['RBENV_VERSION'].split('-').first if ENV['RBENV_VERSION']
     ruby_version_no_patch = '1.9.1' if ruby_version_no_patch == '1.9.3'
 
     home = ENV["HOME"]
