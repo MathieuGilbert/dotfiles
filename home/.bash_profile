@@ -1,4 +1,4 @@
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/versions/2.1.0/bin:$PATH"
 eval "$(rbenv init -)"
 
 if [[ -s "${HOME}/.bash/bashrc" ]] ; then
